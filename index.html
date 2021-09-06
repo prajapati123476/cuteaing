@@ -10,6 +10,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="parallax.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
@@ -21,18 +25,32 @@
     
     -->
 
+    <script>
+        function changeBg(){
+            const image = [
+                'url("tea-2.jpg")',
+                'url("headimg.jpg")',
+                
+            ]
+
+            const secton = document.querySelector('.i-section')
+            const bg = image[Math.floor(Math.random()* image.length)]
+        }
+
+        setInterval(changeBg, 2000);
+    </script>
+
     <header class="i-section">
 
-        <div class="content-1">
-            <img src="./images/headimg.jpg" alt="">
+        // <!-- <div class="content-1">
+        //     <img src="./images/headimg.jpg" alt="">
     
-        </div>
+        // </div> -->
         <div class="content-2">
-            <img src="./images/tea.webp" alt="" />
+            <!-- <img src="./images/tea.webp" alt="" /> -->
             <div class="para">
-                <h4 style="color: aliceblue;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    quia commodi laborum officia, corporis repellendus harum iusto
-                   ducimus architecto dicta cum tenetur?
+                <img src="./images/logobontea.jpg" alt="">
+                <h4 style="color: aliceblue;">Lorem ipsum dolor sit amet consectetur adipisicing elit jdygi isjid
                 </h4>
             </div>
         </div>
@@ -100,10 +118,55 @@
     -->
 
     <section class="iv-section">
-        <h1>Explore Our Menu</h1>
+
+        <div class="head"><h1>Explore Our Menu</h1></div>
+
+
+        <div class="menu">
+            
+            <div class="menu1">
+                <h2>Tea</h2>
+            <center><img src="./images/seperator-black.png" alt="smallpic"></center>
+            <ul style="list-style: square;">
+                <li>Masala Tea</li>
+                <li>Kesar Tea</li>
+                <li>Tulsi Tea</li>
+                <li>Black Tea</li>
+                <li>Green Tea</li>
+                <li>Lemon Tea</li>
+                <li>Cardmon Tea</li>
+                <li>Vanilla Tea</li>
+                <li>Paan Tea</li>
+                <li>Butter Scotch Tea</li>
+            </ul>
+            </div>
+            <div class="menu2">
+                <h2>Coffee</h2>
+            <center><img src="./images/seperator-black.png" alt="smallpic"></center>
+            <ul style="list-style: square;">
+                <li>Plain Coffee</li>
+                <li>Chocolate Coffee</li>
+                <li>Vanilla Coffee</li>
+                <li>Butterscotch Coffee</li>
+            </ul>
+            </div>
+            <div class="menu3">
+                <h2>Milk</h2>
+                <center><img src="./images/seperator-black.png" alt="smallpic"></center>
+                <ul style="list-style: square;">
+                    <li>Hot Milk</li>
+                    <li>Chocolate Milk</li>
+                    <li>Kesar Milk</li>
+                </ul>
+            </div>
+
+
+        </div>
+        
         <!-- <div class="content-1">
             <h1>Explore Our Menu</h1>
         </div> -->
+        <!-- <div class="menu">
         <div class="content-2">
             <h2>Tea</h2>
             <center><img src="./images/seperator-white.png" alt="smallpic"></center>
@@ -139,6 +202,7 @@
                 <li>Kesar Milk</li>
             </ul>
         </div>
+    </div> -->
     </section>
 
 
@@ -150,14 +214,24 @@
 
 
     <section class="v-section">
-        <div class="content">
+        <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="../images/bg">
+            <div class="content">
+                <h1>Franchisees Invited</h1>
+                <center><img src="./images/seperator-white.png" alt="smallpic"></center>
+                <p>Multiple Franchise Formats | Incredible Returns on Investment | Extensive Franchisor Support
+                    ENQUIRE NOW</p>
+                <div class="enq-btn">
+                    <center><a href="#contact">ENQUIRE NOW</a></center>
+                </div>
+        </div>
+        <!-- <div class="content">
             <h1>Franchisees Invited</h1>
             <center><img src="./images/seperator-white.png" alt="smallpic"></center>
             <p>Multiple Franchise Formats | Incredible Returns on Investment | Extensive Franchisor Support
                 ENQUIRE NOW</p>
             <div class="enq-btn">
                 <center><a href="#contact">ENQUIRE NOW</a></center>
-            </div>
+            </div> -->
 
         </div>
 
