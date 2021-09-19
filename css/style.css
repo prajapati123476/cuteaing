@@ -6,32 +6,27 @@
 }
 
 header {
-    height:100vh;
+    display: flex;
     width: 100%;
-    /* background-image: url('../images/bg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.8; */
-    padding: 150px 350px 50px 50px;
+    /* padding: 150px 350px 50px 50px; */
     background-image: url('../images/headimg.jpg');
     background-repeat: no-repeat;
     transition: 3s;
-    background-size:cover;
-
-
+    background-size:100% 100%;
     animation-name:animate;
     animation-duration: 10s;
-    animation-direction: alternate-reverse;
+    animation-direction: alternate-reverse; 
     animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
-    animation-timing-function: none;
+    /* animation-fill-mode: forwards; */
+    /* animation-play-state: running; */
+    /* animation-timing-function: none; */
 
-    /* background-color: rgb(32, 36, 35); */
-    /* border: 4px red solid; */
 }
 
 @keyframes animate{
+    20% {
+        background-image: url(../images/bg3.jpg);
+    }
     40%{
         background-image: url(../images/bg4.jpeg);
     }
@@ -48,11 +43,11 @@ header {
 
 header .content-2 .para {
     text-align: center;
-    width: 20%;
+    width: 35%;
     height: 50vh;
     float: right;
     mix-blend-mode: screen;
-    /* border: 3px red solid; */
+    border: 3px red solid;
 
 }
 
@@ -66,56 +61,187 @@ header .content-2 img {
 
 
 }
-main {
+
+/* %%%%%%%% 
+    
+    main style or second section content-1
+     
+    %%%%%%%%
+ */
+
+
+ main .content-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     width: 100%;
-    height: 80vh;
-    padding: 30px;
-    /* border: rgb(199, 156, 65) 4px solid; */
+    padding: 1.5rem;
+    /* border: 3px red solid; */
 }
 
-main .content-1 {
-    width: 100%;
-    height: 35vh;
-    /* border: 2px red solid; */
-
+main .content-1 .sec-ii-img-1 {
+    width: 20%;
+    margin-right: 10px;
+    position: relative; 
+    animation: cup;
+    transition: 3s;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode:alternate;
+    animation-timing-function: ease-in-out;
+    
+    /* flex-basis: 15; */
 }
-main .content-1 .para-1 {
-    width: 70%;
-    height: 32vh;
-    float: right;
+@keyframes cup {
+    0%{ 
+        visibility: hidden;
+    }
+    25% { 
+        left: -500px;
+    }
+    40% { 
+        left: -400px;
+    }
+    60% { 
+        left: -300px;
+    }
+    75% { 
+        left: -100px;
+    }
+    80% { 
+        left: -50px;
+    }
+    100% { 
+        left: 0px;
+    }
+}
+main .content-1 .sec-ii-img-1 img {
+    width: 100%;
+    height: 100%;
     /* border: 2px rebeccapurple solid; */
-
 }
 
-main .content-1 img {
-    width: 27%;
-    height: 32vh;
-    /* border: 2px yellow solid; */
+main .content-1 .para-1 {
+    width: 74%;
+    float: right;
+    padding: 3rem;
+    /* border: 2px rebeccapurple solid; */
 }
+
+@media (max-width : 700px) {
+    main .content-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 100%;
+        padding: 2rem;
+        border: 2px blue solid;
+    }
+    main .content-1 .sec-ii-img-1 {
+        width: 70%;
+        
+    }
+    main .content-1 .sec-ii-img-1 img {
+        width: 100%;
+        height: 100%;
+        /* border: 2px rebeccapurple solid; */
+    }   
+}
+
+/* %%%%%%%% 
+    
+    main style or second section content-2
+     
+    %%%%%%%%
+ */
 
 main .content-2 {
     width: 100%;
-    height: 35vh;
-    /* border: 2px red solid; */
+    display: flex;
+    flex-direction:row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3rem;
+    /* border: 2px blue solid; */
 
 }
 
-main .content-2 img {
-    width: 27%;
-    height: 32vh;
-    /* border: 2px yellow solid; */
 
+main .content-2 .sec-ii-img-2 {
+    width: 20%;
+    /* border: 2px rgb(20, 20, 4) solid; */
+    margin-left: 10px;
+    position: relative;
+    animation: cup1;
+    transition: 3s;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode:alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes cup1 {
+    0%{ 
+        visibility: hidden;
+    }
+    25% { 
+        left: 500px;
+    }
+    40% { 
+        left: 400px;
+    }
+    60% { 
+        left: 300px;
+    }
+    75% { 
+        left: 100px;
+    }
+    80% { 
+        left: 50px;
+    }
+    100% { 
+        left: 0px;
+    }
+}
+main .content-2 .sec-ii-img-2 img {
+    width: 100%;
+    height: 100%;
 }
 
 main .content-2 .para-2 {
-
-    width: 70%;
-    height: 32vh;
-    float: left;
-    padding: 20px;
+    width: 74%;
+    padding: 1rem;
     /* border: 2px rebeccapurple solid; */
 }
 
+@media (max-width : 700px) {
+    main .content-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 2rem;
+        /* border: 2px blue solid; */
+    }
+    main .content-2 .sec-ii-img-2 {
+        width: 70%;
+
+    }
+    main .content-2 .sec-ii-img-2 img {
+        width: 100%;
+        height: 100%;
+        /* border: 2px rebeccapurple solid; */
+    }   
+}
 
 /*********
  
@@ -126,32 +252,49 @@ main .content-2 .para-2 {
 
 .iii-section {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 50vh;
-    padding: 30px;
-    /* border: rgb(140, 42, 170) 4px solid; */
+    padding: 2rem;
     background-image: url('../images/2957951.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
+    /* border: rgb(235, 23, 69) 2px solid; */
 }
 
 .iii-section img{
     width: 70%;
-    height: 40vh;
-    margin-left: 75px;
+    font-family: sans-serif;
+    /* padding: 2rem; */
+    margin-left: 2rem;
     /* border: yellow 3px solid; */
-    border-radius: 50%;
+  
 }
 
 .iii-section .content-2 {
     
-    width: 30%;
-    height: 40vh;
-    margin-left: 100px;
+    width: 60%;
+    padding: 2rem;
+    font-size: 1.3rem;
+    /* margin-left: 100px; */
     color: antiquewhite;
     /* border: yellow 3px solid; */
 }
 
+@media (max-width : 700px) {
+    .iii-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 2rem;
+    }
+    .iii-section .content-2 {
+        width: 90%;
+    }
+
+}
 
 /*********
  
@@ -162,7 +305,8 @@ main .content-2 .para-2 {
 
 .iv-section .head{
     width: 100%;
-    height: 20%
+    padding: 3rem 0rem 3rem 0rem;
+    /* height: 20% */
 }
 
 .iv-section .menu{
@@ -170,28 +314,22 @@ main .content-2 .para-2 {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    height: 80%;
-    /* border: 5px brown solid; */
+    /* border: 2px brown solid; */
 }
 .iv-section .menu ul
 {
-    padding-top: 20px;
+    padding-top: 1rem;
 }
 .iv-section .menu ul li{
     list-style-type: "\27A4";
     line-height: 28px;
-    
-
 }
 
 .iv-section {
     padding-top: 30px;
-    /* display: flex;     */
     width: 100%;
-    height: 75vh;
+    padding: 2rem;
     text-align: center;
-    
-    /* padding: 50px; */
 }
 
 .iv-section h1 {
@@ -199,24 +337,13 @@ main .content-2 .para-2 {
     
 }
 
-.iv-section .content-2 {
-    width: 33%;
-    height: 60vh;
-    padding: 50px;
+@media (max-width : 700px) {
+    .iv-section .menu {
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
-
-/* .iv-section .content-3 {
-    width: 33%;
-    height: 60vh;
-    padding: 50px;
-} */
-
-.iv-section .content-4 {
-    width: 33%;
-    height: 60vh;
-    padding: 50px;
-}
-
 
 
 /*********
@@ -227,38 +354,30 @@ main .content-2 .para-2 {
 
 .v-section {
     width: 100%;
-    height: 50vh;
-    /* border: rgb(49, 70, 57) 4px solid; */
-    /* background-image: url('../images/bg'); */
-    /* background-attachment: fixed; */
+    padding: 2rem;
+    background-image: url('../images/bg');
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
-  /* scroll-behavior: smooth; */
-}
-
-.parallax {
-    min-height: 100%;
-    background: transparent;
-
+    background-size: 100% 100%;
+    scroll-behavior: smooth;
+    /* border: rgb(49, 70, 57) 4px solid; */
 }
 
 .v-section .content {
     z-index: 2;
     position: relative;
     color: aliceblue;
-    width: 40%;
-    height: 45vh;
+    width: 50%;
     /* border: 3px red solid; */
-    margin: auto;
-    padding:80px 0px 0px 0px;
+    margin: 0 auto;
+    padding:1.5rem 0rem 0rem 0rem;
 }
-
 
 .v-section .content h1 {
     text-align: center;
 }
 .v-section .content p {
-    padding-top: 40px;
+    padding: 2rem;
     text-align: center;
 }
 .v-section .content a {
@@ -278,43 +397,58 @@ main .content-2 .para-2 {
 
 }
 
-
-
-
-
+@media (max-width : 700px) {
+    .v-section .content {
+        width: 60%;
+    }
+}
 
 /* sixth section */
+
+
 .vi-section {
     width: 100%;
-    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
     /* border: rgb(212, 43, 212) 4px solid; */
-    
 }
 
 .vi-section .content {
     width: 50%;
-    height: 45vh;
     /* border: 3px red solid; */
-    /* margin: 10px 10px 10px 10px; */
-    padding: 25px;
+    padding: 1rem;
 }
 
 .vi-section .pic {
+    /* padding:2rem ; */
     width: 50%;
-    height: 45vh;
     /* border: 3px red solid; */
     float: right;
-    margin-top: -45vh;
   
 }
 
 .vi-section .pic img {
     width: 40%;
-    height: 40vh;
-    margin: 0px 0px 0px 150px;
+    /* height: 100%; */
+    /* border: 2px rebeccapurple solid; */
+   margin: 0rem 0rem 0rem 5rem;
 
 }
 
+@media (max-width : 700px) {
+    .vi-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .vi-section .content, .vi-section .pic {
+        width: 90%;
+    }
+    .vi-section .pic img {
+        width: 60%;
+    }
+}
 
 
 /* footar section */
