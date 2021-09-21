@@ -7,10 +7,11 @@
 
 header {
     width: 100%;
-    /* height: 100vh; */
+    height: 100vh;
     /* padding: 150px 350px 50px 50px; */
     background-image: url('../images/headimg.jpg');
     background-repeat: no-repeat;
+    overflow: hidden;
     transition: 3s;
     opacity: 0.9;
     background-size:100% 100%;
@@ -18,6 +19,7 @@ header {
     animation-duration: 10s;
     animation-direction: alternate-reverse; 
     animation-iteration-count: infinite;
+
     /* animation-fill-mode: forwards; */
     /* animation-play-state: running; */
     /* animation-timing-function: none; */
@@ -43,7 +45,7 @@ header {
 
 header .content {
     display: flex;
-    /* text-align: center; */
+    text-align: center;
     justify-content: space-around;
     
     padding: 10% 10% 10% 10%;
@@ -69,7 +71,7 @@ header .content .para {
     font-weight: 300;
     color: white;
     padding: 1rem 1rem 1rem 2rem;
-    width: 40%;
+    width: 60%;
     border-radius: 30%;
     background-color:rgba(0, 0, 0, 0.6);
     /* border: 3px red solid; */
@@ -181,12 +183,18 @@ main .content-1 .para-1 {
         /* border: 2px blue solid; */
     }
     main .content-1 .sec-ii-img-1 {
-        width: 70%;
+        width: 100%;
         
     }
-    main .content-1 .sec-ii-img-1 img {
+    main .content-1 .para-1 {
         width: 100%;
-        height: 100%;
+        padding: 0px;
+        margin: 0px;
+        /* border: 2px solid red; */
+    }
+    main .content-1 .sec-ii-img-1 img {
+
+        width: 50%;
         /* border: 2px rebeccapurple solid; */
     }   
 }
@@ -270,13 +278,16 @@ main .content-2 .para-2 {
         padding: 2rem;
         /* border: 2px blue solid; */
     }
+    main .content-2 .para-2 {
+        width: 100%;
+    }
     main .content-2 .sec-ii-img-2 {
-        width: 70%;
+        width: 100%;
 
     }
     main .content-2 .sec-ii-img-2 img {
-        width: 100%;
-        height: 100%;
+        width: 60%;
+        /* height: 100%; */
         /* border: 2px rebeccapurple solid; */
     }   
 }
@@ -447,10 +458,11 @@ main .content-2 .para-2 {
 .vi-section {
     width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     padding: 1.5rem;
-    /* border: rgb(212, 43, 212) 4px solid; */
+    /* border: rgb(212, 43, 212) 14px solid; */
 }
 
 .vi-section .content {
@@ -461,7 +473,7 @@ main .content-2 .para-2 {
 
 .vi-section .pic {
     /* padding:2rem ; */
-    width: 50%;
+    width: 30%;
     /* margin-left: 16rem ; */
     float: right;
   
